@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: store-service
+    env: docker
+    plan: free
+    rootDir: store
+    autoDeploy: true
+    envVars:
+      - key: DB_URL
+        value: jdbc:mysql://mysql://root:LxkUaGjQBDdRKCttneKePJaORGKpItYy@tramway.proxy.rlwy.net:31803/railway:3306/<db>?useSSL=true&verifyServerCertificate=false
+      - key: DB_USER
+        value: <usuario>
+      - key: DB_PASSWORD
+        value: <contraseña>
+      - key: PORT
+        value: 8080
